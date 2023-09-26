@@ -1,0 +1,13 @@
+.container-fluid {
+    background-color: blue;
+}
+
+.words {
+    color: bisque;
+    font-weight: bold;
+}
+
+.words:hover {
+    background-color: aquamarine;
+    color: blue;
+}
