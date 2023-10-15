@@ -2,5 +2,26 @@
 <p>Counter: {{counter}}</p>
 <button (click)="changeCounter(1)">+</button>
 <button (click)="changeCounter(-1)">-</button>
-<button (click)="reset()">RESET</button>
+<button 
+    *ngIf="counter !== 0"
+        (click)="reset()">RESET
+</button>
+<hr>
+<ul>
+    <li *ngFor="let name of heroNames">
+        {{name}}
+    </li>
+</ul>
+<button
+    (click)="addHero()"
+    style="background-color: blue; color: white;"
+    >
+    Añadir Superheroe
+</button>
+<button 
+    *ngIf="heroNames.length > 0"
+        (click)="removeLastHero()"
+        style="background-color: red; color: white;">
+    Borrar utlimo heroe
+</button>
 <hr>
